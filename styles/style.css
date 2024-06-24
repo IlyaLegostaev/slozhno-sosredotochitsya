@@ -13,21 +13,22 @@
   display: grid;
   grid-template-rows: auto max-content auto;
   align-items: center;
-  margin: 10px;
+  padding: 10px;
   position: relative;
+  height: 100vh;
 }
 
 @media (min-width: 768px) {
   .header {
-    margin: 20px;
+    padding: 20px;
   }
 }
 
 .decorated-zone-rec {
   position: absolute;
-  display: flex;
   justify-self: end;
-  inset-block-start: 0;
+  top: 10px;
+  right: 10px;
   gap: 10px;
   color: var(--accent-color);
   font-family: var(--font-family);
@@ -37,10 +38,11 @@
   line-height: 25px;
   text-align: center;
   text-transform: uppercase;
+  display: var(--rec);
 }
 
 .decorated-zone-rec::after {
-  content: '';
+  content: "";
   align-self: center;
   margin-inline-end: 9px;
   background-color: var(--accent-color);
@@ -50,16 +52,23 @@
   box-shadow: 0 0 4px 2px var(--accent-color);
 }
 
+@media (min-width: 768px) {
+  .decorated-zone-rec {
+    top: 20px;
+    right: 20px;
+  }
+}
+
 .decorated-zone::before {
   content: "";
   position: absolute;
   display: block;
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid var(--accent-color);
-  border-right: 1px solid var(--accent-color);
-  top: 0px;
-  right: 0px;
+  border-top: 1px solid var(---color-button);
+  border-right: 1px solid var(--color-button);
+  top: 10px;
+  right: 10px;
 }
 
 .decorated-zone::after {
@@ -67,16 +76,28 @@
   position: absolute;
   inline-size: 25px;
   block-size: 25px;
-  border-bottom: 1px solid var(--accent-color);
-  border-left: 1px solid var(--accent-color);
-  bottom: 0px;
-  left: 0px;
+  border-bottom: 1px solid var(--color-button);
+  border-left: 1px solid var(--color-button);
+  bottom: 10px;
+  left: 10px;
+}
+
+@media (min-width: 768px) {
+  .decorated-zone::before {
+    top: 20px;
+    right: 20px;
+  }
+
+  .decorated-zone::after {
+    bottom: 20px;
+    left: 20px;
+  }
 }
 
 .header__theme-menu {
   justify-self: end;
   align-self: center;
-  margin-block-start: 66px;
+  margin-block-start: 63px;
 }
 
 @media (min-width: 768px) {
@@ -107,7 +128,7 @@
 .header__theme-menu-button {
   border: none;
   padding: 0 13px;
-  color: var(--accent-color);
+  color: var(color-button);
   font-family: var(--font-family);
   font-weight: 400;
   font-size: var(--font-size);
@@ -147,20 +168,20 @@
 }
 
 .accent-link:focus {
-  border: 1px solid var(--color-text);
+  outline: 1px solid var(--color-text);
 }
 
 .accent-link:focus-visible {
-  border: 1px solid var(--color-text);
+  outline: 1px solid var(--color-text);
 }
 
 .header-title {
-  text-shadow: 4px 4px 0 var(--accent-color);
+  text-shadow: 4px 4px 0 var(--accent-color-shadow);
   color: var(--color-title);
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   font-family: var(--font-family);
   line-height: 95.7px;
-  margin-block-start: 65px;
+  margin-block-start: 67px;
 }
 
 @media (min-width: 768px) {
@@ -179,7 +200,7 @@
 
 .header-text {
   max-width: 355px;
-  margin-block: 55px;
+  margin-block: 55px 66px;
 }
 
 @media (min-width: 768px) {
@@ -214,7 +235,7 @@
 }
 
 .section-heading {
-  color: var(--accent-color);
+  color: var(--accent-heading);
   font-family: var(--font-family);
   font-weight: var(--bold);
   line-height: 130%;
@@ -228,7 +249,7 @@
 
 
 .card-main {
-  margin-block: 52px;
+  margin-block: 40px 30px;
   display: flex;
   flex-direction: column;
   gap: 50px;
@@ -237,8 +258,7 @@
 
 @media (min-width: 768px) {
   .card-main {
-    margin-block-start: 60px;
-    margin-block-end: 70px;
+    margin-block: 60px 50px;
     padding-inline: 20px;
     gap: 80px;
   }
@@ -261,10 +281,9 @@
   }
 }
 
-
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .container-description {
-    gap: 11px;
+    gap: 10px;
   }
 }
 
@@ -356,28 +375,22 @@
 }
 
 .footer {
-  position: relative;
-  max-height: 634px;
   display: grid;
+  position: relative;
+  height: 100vh;
   justify-items: center;
   align-items: center;
-  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   block-size: 100vh;
-  margin: 10px;
+  padding: 10px;
 }
 
 @media (min-width: 768px) {
   .footer {
-    max-height: 984px;
-    margin: 20px;
+    padding: 20px;
   }
 }
 
-@media (min-width: 768px) {
-  .footer {
-    max-height: 728px;
-  }
-}
 
 .footer-title {
   text-shadow: 2px 2px 0 var(--accent-color);
@@ -386,7 +399,6 @@
   font-family: var(--font-family);
   line-height: 95.7px;
   font-weight: var(--bold);
-  margin-block-start: -10px;
 }
 
 @media (min-width: 768px) {

@@ -10,17 +10,40 @@
     чем стили в медиазапросе предпочтений пользователя
   */
   --accent-color: rgba(255, 141, 203, 1);
-  --color-title: rgba(255, 0, 112, 1);
+  --accent-heading: rgba(53, 52, 48, 1);
+  --color-title: rgba(255, 194, 230, 1);
+  --accent-color-shadow: rgba(255, 0, 112, 1);
   --color-text: rgba(53, 52, 48, 1);
   --font-size: 18px;
   --font-text: IBM Plex Mono;
   --cover-image: url(../images/cover-image-light.png);
   --text-color: rgba(53, 52, 48, 1);
-  --font-family: 'IBM Plex mono';
+  --font-family: 'IBM Plex mono', 'sans-serif';
   --bold: 700;
   --font-size: 18px;
   --background-color: rgba(255, 241, 247, 1);
   --accent-color-button: rgba(50, 49, 45, 0.4);
   --color-button: rgba(53, 52, 48, 1);
+  --rec: none;
+}
 
+@media (prefers-color-scheme: light) {
+  :root {
+    --accent-color: rgba(255, 141, 203, 1);
+    --accent-heading: rgba(53, 52, 48, 1);
+    --color-title: rgba(255, 194, 230, 1);
+    --accent-color-shadow: rgba(255, 0, 112, 1);
+    --color-text: rgba(53, 52, 48, 1);
+    --font-size: 18px;
+    --font-text: IBM Plex Mono;
+    --cover-image: url(../images/cover-image-light.png);
+    --text-color: rgba(53, 52, 48, 1);
+    --font-family: 'IBM Plex mono', 'sans-serif';
+    --bold: 700;
+    --font-size: 18px;
+    --background-color: rgba(255, 241, 247, 1);
+    --accent-color-button: rgba(50, 49, 45, 0.4);
+    --color-button: rgba(53, 52, 48, 1);
+    --rec: none;
+  }
 }
