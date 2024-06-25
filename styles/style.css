@@ -65,7 +65,7 @@
   display: block;
   inline-size: 25px;
   block-size: 25px;
-  border-top: 1px solid var(---color-button);
+  border-top: 1px solid var(--color-button);
   border-right: 1px solid var(--color-button);
   top: 10px;
   right: 10px;
